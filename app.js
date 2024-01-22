@@ -18,6 +18,12 @@ app.post("/nuevaTarea", (req, res) => {
   res.send("Tarea creada");
 });
 
+app.delete("/tareas/:id", (req, res) => {
+  const id = req.params.id;
+  tareas = tareas.filter((tarea) => tarea.id != id);
+  res.send("Tarea eliminada");
+});
+
 app.listen(port, () => {
   console.log("Listening on port " + port);
 });
