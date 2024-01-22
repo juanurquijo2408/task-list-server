@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-const tareas = {
+let tareas = {
   id: 123456,
   isCompleted: false,
   description: "Walk the dog",
