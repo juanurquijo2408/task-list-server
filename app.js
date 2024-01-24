@@ -19,9 +19,14 @@ app.post("/nuevaTarea", (req, res) => {
 });
 
 app.delete("/tareas/:id", (req, res) => {
-  const id = req.params.id;
-  tareas = tareas.filter((tarea) => tarea.id != id);
-  res.send("Tarea eliminada");
+  const id = parseInt(req.params.id);
+  const filtro = tareas.findIndex((tarea) => tarea.id === id);
+  if (filtro !== -1) {
+    tareas.splice(filtro, 1);
+    res.send("Se eliminó la tarea de id:" + id);
+  } else {
+    res.status(404).send("No se encontró ninguna tarea con el id:" + id);
+  }
 });
 
 app.listen(port, () => {
