@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+require("dotenv").config();
 const listView = require("./list-view-router.js");
 const listEdit = require("./list-edit-router.js");
+const auth = require("./auth.js");
 
 app.use(express.json());
 
@@ -17,10 +18,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.post("/login", auth.login);
+
+app.use("/tareas", auth.auth);
+
 app.use("/tareas", listView);
 
 app.use("/tareas", listEdit);
 
-app.listen(port, () => {
-  console.log("Listening on port " + port);
+app.listen(process.env.PORT, () => {
+  console.log("Listening on port " + process.env.PORT);
 });
