@@ -34,6 +34,6 @@ Los usuarios utilizarán estas funciones para simplificar la gestión de sus tar
 
 ## ¿Qué tecnologías usaste y por qué?
 
-El servidor de lista de tareas está construido utilizando la tecnología Express, que es un marco de desarrollo web para Node.js. Esta elección se basa en la eficiencia y la rapidez que proporciona Express para la creación de aplicaciones web. Además, se utiliza un enfoque sencillo para asegurar que el producto sea fácil de entender y utilizar.
+El servidor de lista de tareas está construido utilizando la tecnología Express, que es un marco de desarrollo web para Node.js y un método de autenticación con jwt para que se pueda ingresar a la aplicación por medio de un usuario y contraseña predefinidos. Esta elección se basa en la eficiencia y la rapidez que proporciona Express para la creación de aplicaciones web y en la seguridad que nos ofrece jwt al bloquear las funciones por medio de la validación por token. Además, se utiliza un enfoque sencillo para asegurar que el producto sea fácil de entender y utilizar.
 
-En resumen, las tecnologías seleccionadas se centran en la facilidad de uso y la eficiencia para ofrecer una experiencia sin complicaciones a los usuarios.
+En resumen, las tecnologías seleccionadas se centran en la facilidad de uso la seguridad y la eficiencia para ofrecer una experiencia sin complicaciones a los usuarios.

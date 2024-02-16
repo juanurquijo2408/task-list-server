@@ -25,6 +25,7 @@ const validar = (req, res, next) => {
   }
   next();
 };
+
 router.post("/nuevaTarea", validar, (req, res) => {
   const nuevaTarea = req.body;
   tareas.push(nuevaTarea);
